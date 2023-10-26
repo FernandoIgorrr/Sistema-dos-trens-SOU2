@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "trem.h"
+#include "linha.h"
 
 namespace Ui {
 class MainWindow;
@@ -31,6 +32,20 @@ private:
     //Cria os objetos TREM's
     Trem *trem1;
     Trem *trem2;
+    Trem *trem3;
+    Trem *trem4;
+    Trem *trem5;
+
+    Linha *linha1;
+    Linha *linha2;
+    Linha *linha3;
+    Linha *linha4;
+    Linha *linha5;
+    Linha *linha6;
+    Linha *linha7;
+    Linha *linha8;
+    Linha *linha9;
+    Linha *linha10;
 };
 
 #endif // MAINWINDOW_H

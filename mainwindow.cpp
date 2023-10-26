@@ -1,11 +1,17 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "linhahorizontal.h"
+#include "direcao.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //Ciar as linhas do trem
+    //Coordenada *coord = new Coordenada(100,100);
+    linha1 = new LinhaHorizontal(1,100,Direcao::Direita,new Coordenada(100,100));
 
     //Cria o trem com seu (ID, posição X, posição Y)
     trem1 = new Trem(1,60,30);
