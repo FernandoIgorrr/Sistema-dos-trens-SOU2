@@ -4,19 +4,20 @@
 
 class Coordenada
 {
-public:
-    Coordenada(int,int);
-    Coordenada();
 
-    int getX();
-    int getY();
-    void setX(int);
-    void setY(int);
+    private:
+        int x;
+        int y;
 
-private:
-    int x;
-    int y;
+    public:
+        Coordenada(int,int);
+        Coordenada();
+
+        void setX(int);
+        void setY(int);
+
+        int getX();
+        int getY();
 
 };
-
 #endif // COORDENADA_H

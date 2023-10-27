@@ -3,10 +3,11 @@
 
 enum class Direcao
 {
-    Esquerda,
-    Direita,
-    Cima,
-    Baixo
+
+        CIMA,
+ESQUERDA,
+                DIREITA,
+        BAIXO
 };
 
 #endif // DIRECAO_H

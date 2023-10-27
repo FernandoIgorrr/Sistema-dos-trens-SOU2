@@ -3,9 +3,9 @@
 
 #include <QMainWindow>
 #include "trem.h"
-#include "linha.h"
+#include "trilho.h"
 
-namespace Ui {
+namespace Ui{
 class MainWindow;
 }
 
@@ -19,7 +19,7 @@ public:
 
 
 public slots:
-    void updateInterface(int,int,int);
+    void updateInterface(Trem *trem);
 
 private slots:
     void on_pushButton_clicked();
@@ -29,23 +29,29 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    //Cria os objetos TREM's
+    //Cria os objetos Trem's
     Trem *trem1;
     Trem *trem2;
     Trem *trem3;
     Trem *trem4;
     Trem *trem5;
 
-    Linha *linha1;
-    Linha *linha2;
-    Linha *linha3;
-    Linha *linha4;
-    Linha *linha5;
-    Linha *linha6;
-    Linha *linha7;
-    Linha *linha8;
-    Linha *linha9;
-    Linha *linha10;
+    //Cria os objetos Trilho's
+    Trilho *trilho1;
+    Trilho *trilho2;
+    Trilho *trilho3;
+    Trilho *trilho4;
+    Trilho *trilho5;
+    Trilho *trilho6;
+    Trilho *trilho7;
+    Trilho *trilho8;
+    Trilho *trilho9;
+    Trilho *trilho10;
+    Trilho *trilho11;
+    Trilho *trilho12;
+    Trilho *trilho13;
+    Trilho *trilho14;
+    Trilho *trilho15;
 };
 
 #endif // MAINWINDOW_H

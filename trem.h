@@ -1,8 +1,18 @@
 #ifndef TREM_H
 #define TREM_H
 
+#include "coordenada.h"
+#include "trilho.h"
+#include "direcao.h"
+
+
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QWidget>
+
+#include <list>
 #include <QThread>
 
+using namespace std;
 /*
  * Classe Trem herda QThread
  * Classe Trem passa a ser uma thread.
@@ -13,18 +23,30 @@
 class Trem: public QThread{
  Q_OBJECT
 public:
-    Trem(int,int,int);  //construtor
+    Trem(int,Coordenada,QLabel*);  //construtor
     void run();         //função a ser executada pela thread
 
+    void move();
+    bool mudar_direcao();
+    bool checkVelocidade(int);
+
+    void setVelocidade(int);
+
+    int getX();
+    int getY();
+
+    QLabel* label_trem;
 
 //Cria um sinal
 signals:
-    void updateGUI(int,int,int);
+    void updateGUI(Trem *trem);
 
 private:
-   int x;           //posição X do trem na tela
-   int y;           //posição Y do trem na tela
    int ID;          //ID do trem
+   Coordenada coordenada; // posição x,y do trem na tela
+   //list<Trilho> trilhos; // lista de trilhos que o trem vai andar
+   //Trilho trilho_atual; // o trilho atual onde o trem ta passando
+   Direcao direcao;// direção ao qual o trem vai andar;
    int velocidade;  //Velocidade. É o tempo de dormir em milisegundos entre a mudança de posição do trem
 };
 

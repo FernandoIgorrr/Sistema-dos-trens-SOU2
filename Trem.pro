@@ -14,18 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     coordenada.cpp \
-    linha.cpp \
-    linhahorizontal.cpp \
-    linhavertical.cpp \
         mainwindow.cpp \
-    trem.cpp
+    trem.cpp \
+    trilho.cpp \
 
 HEADERS  += mainwindow.h \
     coordenada.h \
     direcao.h \
-    linha.h \
-    linhahorizontal.h \
-    linhavertical.h \
-    trem.h
+    tipo.h \
+    trem.h \
+    trilho.h \
 
 FORMS    += mainwindow.ui
